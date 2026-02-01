@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Exams {
-    private final String title;
-    private final List<Questions> questions;
+    private String title;
+    private List<Questions> questions;
 
     public Exams(String title, List<Questions> questions) {
         if (title == null || title.isBlank())
