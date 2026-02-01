@@ -1,14 +1,11 @@
-package oop_project;
-package app;
+package oop_project.app;
 
-import model.*;
-import java.util.scanner;
+import oop_project.model.*;
 
 public class Main 
 {
     public static void main( String[] args )
     {
-        Scanner sc = new Scanner(System.in);
         
     }
 }
