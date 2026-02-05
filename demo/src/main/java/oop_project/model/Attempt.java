@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Attempt {
-    private Exams exam; 
+    private Exam exam; 
     private Map<Integer, Answer> answers;
 
-    public Attempt(Exams exam) { 
+    public Attempt(Exam exam) { 
         if (exam == null) throw new IllegalArgumentException("Exam is required");
         this.exam = exam;
         this.answers = new HashMap<>();
@@ -28,7 +28,7 @@ public class Attempt {
         int total = 0;
 
         // Changed Question to Questions to match Questions.java
-        for (Questions q : exam.getQuestions()) { 
+        for (Question q : exam.getQuestions()) { 
             Answer a = answers.get(q.getNumber());
             total += q.grade(a);
         }

@@ -1,37 +1,37 @@
 package oop_project.data;
 
-import oop_project.model.Exams;
-import oop_project.model.Questions;
+import oop_project.model.Exam;
+import oop_project.model.Question;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SampleData {
-    public static Exams createSampleExam() {
-        List<Questions> questions = new ArrayList<>();
+    public static Exam createSampleExam() {
+        List<Question> questions = new ArrayList<>();
 
-        questions.add(new Questions(
+        questions.add(new Question(
                 1,
                 "Answer is a",
                 "a",
                 2
         ));
 
-        questions.add(new Questions(
+        questions.add(new Question(
                 2,
                 "Answer is a",
                 "a",
                 2
         ));
 
-        questions.add(new Questions(
+        questions.add(new Question(
                 3,
                 "Answer is a",
                 "a",
                 2
         ));
 
-        return new Exams("Test", questions);
+        return new Exam("Test", questions);
     }
 
 }

@@ -9,14 +9,14 @@ import java.util.Scanner;
     {
         Scanner sc = new Scanner(System.in);
 
-        Exams exam = SampleData.createSampleExam();
+        Exam exam = SampleData.createSampleExam();
         Attempt attempt = new Attempt(exam);
 
         System.out.println("=== " + exam.getTitle() + " ===");
         System.out.println("Questions: " + exam.getQuestions().size());
         System.out.println();
 
-        for (Questions q : exam.getQuestions()) {
+        for (Question q : exam.getQuestions()) {
             System.out.println("Q" + q.getNumber() + ": " + q.getText());
             System.out.print("Your answer: ");
             String input = sc.nextLine();
