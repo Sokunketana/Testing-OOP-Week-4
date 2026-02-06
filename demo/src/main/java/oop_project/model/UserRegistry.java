@@ -28,7 +28,7 @@ public class UserRegistry {
             if (u.getUsername().equals(username)) {
                 return u;
             }
-        }
+        }   
         return null;
     } 
 }
