@@ -28,11 +28,16 @@ public class Teacher extends User {
     }
 
     public Exam buildExam(String title) {
+        return buildExam(title, "General");
+    }
+
+    public Exam buildExam(String title, String category) {
         if (draftQuestions.isEmpty()) {
             throw new IllegalStateException("Cannot publish an exam with no questions.");
         }
-        Exam exam = new Exam(title, draftQuestions);
+        Exam exam = new Exam(title, category, draftQuestions);
         managedExams.add(exam);
+        draftQuestions.clear();
         return exam;
     }
 
